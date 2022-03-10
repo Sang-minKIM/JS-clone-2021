@@ -200,3 +200,14 @@ function changeColor() {
 window.addEventListener("resize", changeColor);
 //window.innerWidth 를 왜 const width = window.innerWidth로 쓰면 작동이 안될까?
 //if 문을 어떤건 function안에 넣어야 하고 어떤걸 밖에 써도 작동하는지 잘 모르겠다.
+/*2022.2월 8일 const를 function안에서 하면 정상적으로 작동을 할 것이다.
+그리고 if문의 경우에 꼭 function안에 넣어야 하는 것이 아니라 위의 경우에 eventListener가 있어서
+function을 작동하게 하려다 보니 function자체를 if문으로 쓴 것.*/
+
+function sayHello() {
+  console.log("hello");
+}
+
+setInterval(sayHello, 5000);
+
+setTimeout(sayHello, 5000);
